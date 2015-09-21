@@ -1,29 +1,22 @@
 package jp.fbc.yowbow;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.crashlytics.android.Crashlytics;
-import io.fabric.sdk.android.Fabric;
 
-public class MainActivity extends AppCompatActivity {
+public class DemandResultActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Fabric.with(this, new Crashlytics());
-
-        Intent intent = new Intent(MainActivity.this, TopActivity.class);
-        startActivity(intent);
+        setContentView(R.layout.activity_demand_result);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_demand_result, menu);
         return true;
     }
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "jp.fbc.yowbow.DemandResultActivity"/>
+      <point      
+        x = "4039"      
+        y = "135"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "jp.fbc.yowbow.MainActivity"/>
+      <point      
+        x = "272"      
+        y = "84"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "jp.fbc.yowbow.DemandViewActivity"/>
+      <point      
+        x = "1211"      
+        y = "1584"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "jp.fbc.yowbow.DemandAddActivity"/>
+      <point      
+        x = "2158"      
+        y = "96"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "jp.fbc.yowbow.TopActivity"/>
+      <point      
+        x = "1204"      
+        y = "96"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
