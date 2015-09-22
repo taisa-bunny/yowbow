@@ -9,6 +9,23 @@
     <TextView
         android:text="@string/title_activity_demand_result"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/result_button_1"
+        android:id="@+id/button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="送信が完了しました"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="53dp" />
 
 </RelativeLayout>
