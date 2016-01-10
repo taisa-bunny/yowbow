@@ -8,16 +8,16 @@
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "jp.fbc.yowbow.DemandResultActivity"/>
       <point      
-        x = "4039"      
-        y = "135"/>
+        x = "3095"      
+        y = "102"/>
     </statePointEntry>
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
         className = "jp.fbc.yowbow.MainActivity"/>
       <point      
-        x = "272"      
-        y = "84"/>
+        x = "265"      
+        y = "77"/>
     </statePointEntry>
     <statePointEntry>
       <state      
