@@ -1,4 +1,4 @@
-package jp.fbc.yowbow;
+package jp.fbc.yowbow.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,19 +7,42 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import jp.fbc.yowbow.R;
 
 public class DemandResultActivity extends AppCompatActivity {
+
+
+    private String strName;
+    private String strContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_demand_result);
 
+        Intent intent = getIntent();
+
+        strName = intent.getStringExtra("strName");
+        strContent = intent.getStringExtra("strContent");
+
+        TextView txtName = (TextView) findViewById(R.id.txt_name);
+        TextView txtContent = (TextView) findViewById(R.id.txt_content);
+
+        if (strName != null) {
+            txtName.setText(strName);
+        }
+
+        if (strContent != null) {
+            txtContent.setText(strContent);
+        }
+
         Button backButton = (Button) findViewById(R.id.button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), TopActivity.class);
+                Intent intent = new Intent(getApplication(), HomeViewActivity.class);
                 startActivity(intent);
             }
         });

@@ -23,19 +23,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TopActivity"
-            android:label="@string/title_activity_top" >
+            android:name=".activity.HomeViewActivity"
+            android:label="@string/title_activity_home_view" >
         </activity>
         <activity
-            android:name=".DemandAddActivity"
+            android:name=".activity.NeedPostActivity"
             android:label="@string/title_activity_demand_add" >
         </activity>
         <activity
-            android:name=".DemandResultActivity"
+            android:name=".activity.DemandResultActivity"
             android:label="@string/title_activity_demand_result" >
         </activity>
         <activity
-            android:name=".DemandViewActivity"
+            android:name=".activity.DemandViewActivity"
             android:label="@string/title_activity_demand_view" >
         </activity>
     </application>

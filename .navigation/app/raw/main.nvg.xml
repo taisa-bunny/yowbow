@@ -6,7 +6,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "jp.fbc.yowbow.DemandResultActivity"/>
+        className = "jp.fbc.yowbow.activity.DemandResultActivity"/>
       <point      
         x = "3095"      
         y = "102"/>
@@ -22,7 +22,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "jp.fbc.yowbow.DemandViewActivity"/>
+        className = "jp.fbc.yowbow.activity.DemandViewActivity"/>
       <point      
         x = "1211"      
         y = "1584"/>
@@ -30,7 +30,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "jp.fbc.yowbow.DemandAddActivity"/>
+        className = "jp.fbc.yowbow.activity.NeedPostActivity"/>
       <point      
         x = "2158"      
         y = "96"/>
@@ -38,7 +38,7 @@
     <statePointEntry>
       <state      
         class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
-        className = "jp.fbc.yowbow.TopActivity"/>
+        className = "jp.fbc.yowbow.activity.HomeViewActivity"/>
       <point      
         x = "1204"      
         y = "96"/>

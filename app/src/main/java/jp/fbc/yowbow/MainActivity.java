@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
+import jp.fbc.yowbow.activity.HomeViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Fabric.with(this, new Crashlytics());
 
-        Intent intent = new Intent(MainActivity.this, TopActivity.class);
+        Intent intent = new Intent(MainActivity.this, HomeViewActivity.class);
         startActivity(intent);
     }
 

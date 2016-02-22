@@ -17,7 +17,7 @@
     <string name="demand_add_content">要望を記入</string>
 
 
-    <string name="title_activity_top">TopActivity</string>
+    <string name="title_activity_home_view">HomeViewActivity</string>
     <string name="title_activity_demand_add">DemandAddActivity</string>
     <string name="title_activity_demand_result">DemandResultActivity</string>
     <string name="title_activity_demand_view">DemandViewActivity</string>

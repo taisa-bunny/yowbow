@@ -1,4 +1,4 @@
-package jp.fbc.yowbow;
+package jp.fbc.yowbow.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-import com.android.volley.toolbox.Volley;
+import jp.fbc.yowbow.R;
 
 public class DemandViewActivity extends AppCompatActivity {
 
