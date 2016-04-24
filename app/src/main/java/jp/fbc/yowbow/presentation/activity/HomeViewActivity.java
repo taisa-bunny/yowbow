@@ -1,10 +1,11 @@
-package jp.fbc.yowbow.activity;
+package jp.fbc.yowbow.presentation.activity;
 
 import android.content.Intent;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,16 +14,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import jp.fbc.yowbow.data.api.ApiConnect;
 import jp.fbc.yowbow.R;
+import jp.fbc.yowbow.data.api.ApiConnectOkHttp;
 
-public class HomeViewActivity extends BaseActivity {
+public class HomeViewActivity extends AppCompatActivity {
 
     private String[] mPlanetTitles = null;
     private DrawerLayout leftDrawerLayout = null;
     private DrawerLayout rightDrawerLayout = null;
     private ListView leftListView = null;
     private ListView rightListView = null;
-
 
 
     @Override
@@ -34,7 +36,7 @@ public class HomeViewActivity extends BaseActivity {
         // ドロワーメニューのリストの値を初期化
         mPlanetTitles = new String[]{"aaa", "bbb", "ccc", "ddd"};
 
-        leftDrawerLayout =  (DrawerLayout) findViewById(R.id.drawer_layout);
+        leftDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         leftListView = (ListView) findViewById(R.id.left_drawer);
         rightListView = (ListView) findViewById(R.id.right_drawer);
 
@@ -68,35 +70,61 @@ public class HomeViewActivity extends BaseActivity {
                 }
         );
 
-
-
+        //Button実装
         Button addButton = (Button) findViewById(R.id.button1);
         Button viewButton = (Button) findViewById(R.id.button2);
 
+        //FloatingButton実装
         FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
 
+        //各ボタンの押下処理
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                ApiConnect connect = new ApiConnectOkHttp();
+
+                Intent intent = new Intent(getApplication(), NeedPostActivity.class);
+                intent.putExtra("connect", connect);
+                startActivity(intent);
+            }
+        });
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplication(), NeedPostActivity.class);
                 startActivity(intent);
             }
         });
 
-        addButton.setOnClickListener(new View.OnClickListener(){
+        viewButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v){
-                Intent intent = new Intent(getApplication(),NeedPostActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplication(), DemandViewActivity.class);
                 startActivity(intent);
+            }
+        });
+        findViewById(R.id.drawer_layout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeViewActivity.this, NeedPostActivity.class));
             }
         });
 
-        viewButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent intent = new Intent(getApplication(),DemandViewActivity.class);
-                startActivity(intent);
-            }
-        });
+
+    }
+
+
+
+    //API通信部
+    public void onLoad(){
+        // 使用するコネクタを生成
+        ApiConnect connect = new ApiConnectOkHttp();
+
+        // インテントに渡す
+//        Intent i = new Intent(getApplicationContext(), WeatherActivity.class);
+//        i.putExtra("connect", connect);
+//        startActivity(i);
 
     }
 

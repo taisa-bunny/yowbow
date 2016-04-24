@@ -1,4 +1,4 @@
-package jp.fbc.yowbow.activity;
+package jp.fbc.yowbow.presentation.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

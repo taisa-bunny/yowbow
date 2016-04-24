@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import com.crashlytics.android.Crashlytics;
 import io.fabric.sdk.android.Fabric;
-import jp.fbc.yowbow.activity.HomeViewActivity;
+import jp.fbc.yowbow.presentation.activity.HomeViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 

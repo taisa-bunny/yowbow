@@ -1,24 +1,24 @@
-package jp.fbc.yowbow.activity;
+package jp.fbc.yowbow.presentation.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
+import butterknife.ButterKnife;
 import jp.fbc.yowbow.R;
-import jp.fbc.yowbow.holder.BusHolder;
+import jp.fbc.yowbow.utilties.holder.BusHolder;
 
 /**
  * Created by MBPU on 2016/02/14.
  */
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
+        setContentView(getLayoutResId());
+        ButterKnife.bind(this);
 //        FloatingActionButton floatingActionButton = (FloatingActionButton) findViewById(R.id.fab);
 //
 //        floatingActionButton.setOnClickListener(new View.OnClickListener() {
@@ -30,6 +30,8 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
+
+    abstract int getLayoutResId();
 
     @Override
     protected void onResume() {

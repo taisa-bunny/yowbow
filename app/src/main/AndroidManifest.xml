@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="jp.fbc.yowbow" >
+    package="jp.fbc.yowbow">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -23,19 +23,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.HomeViewActivity"
+            android:name=".presentation.activity.HomeViewActivity"
             android:label="@string/title_activity_home_view" >
         </activity>
+
         <activity
-            android:name=".activity.NeedPostActivity"
+            android:name=".presentation.activity.NeedPostActivity"
             android:label="@string/title_activity_demand_add" >
         </activity>
+
         <activity
-            android:name=".activity.DemandResultActivity"
+            android:name=".presentation.activity.DemandResultActivity"
             android:label="@string/title_activity_demand_result" >
         </activity>
         <activity
-            android:name=".activity.DemandViewActivity"
+            android:name=".presentation.activity.DemandViewActivity"
             android:label="@string/title_activity_demand_view" >
         </activity>
     </application>

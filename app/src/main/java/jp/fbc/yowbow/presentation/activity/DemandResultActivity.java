@@ -1,4 +1,4 @@
-package jp.fbc.yowbow.activity;
+package jp.fbc.yowbow.presentation.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,42 +7,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
 import jp.fbc.yowbow.R;
 
-public class NeedPostActivity extends BaseActivity {
+public class DemandResultActivity extends AppCompatActivity {
 
-    private String txtName;
-    private String txtContent;
 
-    private EditText editName;
-    private EditText editContent;
-
+    private String strName;
+    private String strContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_need_post);
-        Button backButton = (Button) findViewById(R.id.button1);
-        Button submitButton = (Button) findViewById(R.id.button2);
+        setContentView(R.layout.activity_demand_result);
 
-        editName = (EditText) findViewById(R.id.edit_name);
-        editContent = (EditText) findViewById(R.id.edit_content);
+        Intent intent = getIntent();
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        strName = intent.getStringExtra("strName");
+        strContent = intent.getStringExtra("strContent");
 
-                txtName = editName.getText().toString();
-                txtContent = editContent.getText().toString();
-                Intent intent = new Intent(getApplication(), DemandResultActivity.class);
-                intent.putExtra("strName", txtName);
-                intent.putExtra("strContent", txtContent);
-                startActivity(intent);
-            }
-        });
+        TextView txtName = (TextView) findViewById(R.id.txt_name);
+        TextView txtContent = (TextView) findViewById(R.id.txt_content);
 
+        if (strName != null) {
+            txtName.setText(strName);
+        }
+
+        if (strContent != null) {
+            txtContent.setText(strContent);
+        }
+
+        Button backButton = (Button) findViewById(R.id.button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,13 +47,12 @@ public class NeedPostActivity extends BaseActivity {
             }
         });
 
-
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_demand_add, menu);
+        getMenuInflater().inflate(R.menu.menu_demand_result, menu);
         return true;
     }
 

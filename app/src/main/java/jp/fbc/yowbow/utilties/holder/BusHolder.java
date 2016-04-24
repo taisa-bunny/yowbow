@@ -1,4 +1,4 @@
-package jp.fbc.yowbow.holder;
+package jp.fbc.yowbow.utilties.holder;
 
 import com.squareup.otto.Bus;
 
